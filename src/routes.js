@@ -10,6 +10,8 @@ import Home from './screens/Home';
 import Profile from './screens/Profile';
 import Drink from './screens/Drink';
 
+import DrinkButton from './components/DrinkButton';
+
 const Routes = () => {
   return (
     <NavigationContainer>
@@ -36,8 +38,8 @@ const Routes = () => {
           name="Drink" 
           component={Drink}
           options={{
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome5 name="beer" size={size} color={color} />
+            tabBarIcon: ({ color }) => (
+              <DrinkButton />
             )
           }}
         />

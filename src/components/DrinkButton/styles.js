@@ -1,24 +1,29 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   },
-  
-	iconTabRound: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    marginBottom: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+  button: {
+    backgroundColor: "#0B6121",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 84,
+    height: 84,
+    borderRadius: 42,
     elevation: 6,
-    shadowColor: '#9C27B0',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
+    marginBottom: 60,
+    shadowColor: "#0B6121",
     shadowRadius: 5,
+    shadowOffset: { height: 10 },
+    shadowOpacity: 0.3,
+    borderWidth: 2,
+    borderColor: "#FFF"
+  },
+  text: {
+    fontWeight: "bold",
+    color: "#FFF"
   }
 });
