@@ -6,7 +6,7 @@ import styles from './styles';
 const Profile = () => {
   return (
     <View style={styles.container}>
-      <Text>Profile</Text>
+      <Text style={styles.text}>Profile</Text>
     </View>
   );
 }

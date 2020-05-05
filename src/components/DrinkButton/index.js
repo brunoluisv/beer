@@ -1,48 +1,28 @@
 import React from 'react';
-import { View, Text, TouchableHighlight, Animated } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-buttonSize = new Animated.Value(1);
-mode = new Animated.Value(0);
-
-handlePress = () => {
-  Animated.sequence([
-    Animated.timing(this.buttonSize, {
-      toValue: 0.95,
-      duration: 200
-    }),
-    Animated.timing(this.buttonSize, {
-      toValue: 1
-    }),
-    Animated.timing(this.mode, {
-      toValue: this.mode._value === 0 ? 1 : 0
-    })
-  ]).start();
-}
-
 const DrinkButton = () => {
-  const sizeStyle = {
-    transform: [{ scale: this.buttonSize }]
+  const navigation = useNavigation();
+
+  const navigateToDrinks = () => {
+    navigation.navigate('Drink');
   }
 
-  const rotation = this.mode.interpolate({
-    inputRange: [0, 1],
-    outputRange: ["0deg", "-45deg"]
-  })
-
   return (
-    <View style={styles.container}>
-      <Animated.View style={[ styles.button, sizeStyle ]}>
-        <TouchableHighlight onPress={this.handlePress} underlayColor="#0B6121">
-          <Animated.View style={{ transform: [{ rotate: rotation }] }}>
-            <Ionicons name="ios-beer" size={34} color="#FFF"/>
-          </Animated.View>
-        </TouchableHighlight>
-        <Text style={styles.text}>Tap</Text>
-      </Animated.View>
-    </View>
+    <TouchableOpacity onPress={navigateToDrinks}>
+      <View style={styles.container}>
+        <LinearGradient style={styles.button} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#66ff33', '#0B6121']}>
+          <Ionicons name="ios-beer" size={36} color='#FFF'/>
+          <Text style={styles.text}>Tap</Text>
+        </LinearGradient>
+      </View>
+    </TouchableOpacity>
+
   );
 }
 

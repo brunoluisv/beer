@@ -6,7 +6,7 @@ import styles from './styles';
 const Drink = () => {
   return (
     <View style={styles.container}>
-      <Text>Drink</Text>
+      <Text style={styles.text}>Drink</Text>
     </View>
   );
 }
