@@ -2754,6 +2754,13 @@ expo-font@~8.1.0:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
 
+expo-image-picker@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-8.1.0.tgz#014e4f4aaef4c1daf56d13de27a41ef78660aa15"
+  integrity sha512-UMHiDGiflg47A/nfnmJ1gYdB/sEoxB4STVGgMeLNYpUkVR59kUWqsGTyVEtSywNCLPuXPZVB9NaRUd81Rbs7lA==
+  dependencies:
+    expo-permissions "~8.1.0"
+
 expo-keep-awake@~8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-8.1.0.tgz#3a1d8aa5a8395d40c7d79e1c93020ae5f848e664"
@@ -5023,11 +5030,6 @@ react-native-linear-gradient@^2.5.6:
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
-
-react-native-masked-input-text@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/react-native-masked-input-text/-/react-native-masked-input-text-1.0.11.tgz#287585b4f60d51fbb7a7a2f2074ae07a9042616b"
-  integrity sha512-6y1Q3SlroBZ8CgeAi5liB6cJp57yV0XB9tsNsOB4O6GZ7LT+Q7KtHbTri0ZT/vKKnOCXAPoSUB+wTm5A4gDVAQ==
 
 react-native-reanimated@~1.7.0:
   version "1.7.1"
