@@ -6,21 +6,21 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const AppTabs = createBottomTabNavigator();
 
-import Home from './screens/Home';
-import Profile from './screens/Profile';
-import Drink from './screens/Drink';
+import Home from '../screens/Home';
+import Profile from '../screens/Profile';
+import Drink from '../screens/Drink';
 
-import DrinkButton from './components/DrinkButton';
-
-const Routes = () => {
+const TabsRoutes = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <AppTabs.Navigator
         tabBarOptions={{
           showLabel: false,
           inactiveTintColor: "#FFF",
-          activeTintColor: "#0B6121",
+          activeTintColor: "#FF8000",
+          keyboardHidesTabBar: true,
           style: {
+            position: "absolute",
             backgroundColor: "#000"
           }
         }}
@@ -38,8 +38,8 @@ const Routes = () => {
           name="Drink" 
           component={Drink}
           options={{
-            tabBarIcon: ({ color }) => (
-              <DrinkButton />
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5 name="beer" size={size} color={color} />
             )
           }}
         />
@@ -57,5 +57,4 @@ const Routes = () => {
   );
 }
 
-export default Routes;
-
+export default TabsRoutes;

@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
 import styles from './styles';
-import stannis from '../../assets/stannis.jpeg';
 
 const Profile = () => {
   let [fontsLoaded] = useFonts({
-    'AmaticSCRegular': require('../../../assets/fonts/AmaticSC-Regular.ttf'),
-    'AmaticSCBold': require('../../../assets/fonts/AmaticSC-Bold.ttf')
+    'FrancoisOne': require('../../../assets/fonts/FrancoisOne-Regular.ttf'),
+    'Jost': require('../../../assets/fonts/Jost.ttf')
   });
 
   if(!fontsLoaded) {
@@ -17,20 +17,34 @@ const Profile = () => {
   }else {
     return (
       <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.bodycard}>
-            <Image source={stannis} style={styles.logo} />
-          </View>
-          <View style={styles.footercard}>
-            <Text style={{color: "#FFF", fontFamily: 'AmaticSCBold', fontSize: 26}}>Cadastrar Cartão</Text>
-          </View>
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.photoMoldure}>
+            <FontAwesome name="user-circle" size={160} color='#CCC'/>
+            <View style={styles.cameraIcon}>
+              <FontAwesome name="camera-retro" size={25} color="#FFF"/>
+            </View>
+          </TouchableOpacity>
         </View>
-
-        <View style={styles.form}>
-          <TextInput style={[styles.input, {fontFamily: 'AmaticSCBold'}]} placeholder="Nome" placeholderTextColor="#000" />
-          <TextInput style={[styles.input,{fontFamily: 'AmaticSCBold'}]} placeholder="Número do Cartão" placeholderTextColor="#000" />
-          <TouchableOpacity style={styles.button}>
-            <Text style={[styles.confirm, {fontFamily: 'AmaticSCBold'}]}>Cadastrar</Text>
+        <View style={styles.headerName}>
+          <Text style={[styles.name, {fontFamily: 'FrancoisOne'}]}>BRUNO LUIS</Text>
+        </View>
+        <View style={styles.infoContainer}>
+          <TouchableOpacity style={styles.mydata}>
+            <FontAwesome name="user-circle" size={50} color='#000'/>
+            <Text style={[styles.mydataText, {fontFamily: 'Jost'}]}>Meus Dados</Text>
+            <MaterialIcons name="navigate-next" size={36} color="black" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.addCard}>
+          <Text style={[styles.infotext, {fontFamily: 'FrancoisOne'}]}>CARTÕES</Text>
+          <TouchableOpacity style={styles.add}>
+            <Text style={[{fontSize: 16, fontFamily: 'Jost'}]}>Adicionar</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.addStreet}>
+          <Text style={[styles.infotext, {fontFamily: 'FrancoisOne'}]}>ENDEREÇOS</Text>
+          <TouchableOpacity style={styles.add}>
+            <Text style={[{fontSize: 16, fontFamily: 'Jost'}]}>Adicionar</Text>
           </TouchableOpacity>
         </View>
       </View>

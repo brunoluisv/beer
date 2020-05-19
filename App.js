@@ -1,10 +1,12 @@
 import React from 'react';
 
-import Routes from './src/routes';
+import StackRoutes from './src/routes/StackRoutes';
+import TabsRoutes from './src/routes/TabsRoutes';
 
 const App = () => {
   return (
-    <Routes />
+    //<StackRoutes />
+    <TabsRoutes/>
   );
 }
 

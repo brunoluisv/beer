@@ -4,59 +4,77 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F5ECCE'
+    backgroundColor: '#FFF'
   },
-  card: {
-    width: 350,
-    height: 220,
-    marginTop: 60,
-    borderRadius: 10
-  },
-  bodycard: {
-    justifyContent: 'flex-start',
+  header: {
+    marginTop: 40
+  },  
+  photoMoldure: {
     alignItems: 'center',
-    flex: 5,
-    backgroundColor: "#FFF",
-    borderTopEndRadius: 10,
-    borderTopStartRadius: 10
-  },
-  footercard: {
-    flex: 2.2,
-    backgroundColor: "#000",
-    borderBottomEndRadius: 10,
-    borderBottomStartRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  logo: {
-    position: 'absolute',
-    width: 100,
-    height: 100,
-    marginTop: 15
-  },
-  form: {
-    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    backgroundColor: '#FFF'
   },
-  input: {
-    height: 50,
-    width: 300,
-    borderBottomWidth: 1,
-    borderColor: '#000',
-    fontSize: 20
+  cameraIcon: {
+    position: 'absolute',
+    left: 110,
+    top: 120,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: "#FF8000"
   },
-  button: {
-    width: 240,
-    height: 60,
-    backgroundColor: '#000',
-    borderRadius: 60,
-    marginTop: 80,
-    justifyContent: 'center'
+  headerName: {
+    marginTop: 10
   },
-  confirm: {
-    color: '#FFF',
-    textAlign: 'center',
+  name: {
+    fontSize: 34
+  },
+  infoContainer: {
+    marginTop: 40
+  },
+  mydata: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    width: 350,
+    height: 100,
+    backgroundColor: '#FFF',
+    borderRadius: 20,
+    borderWidth: 1
+  },
+  mydataText: {
     fontSize: 24
+  },
+  addCard: {
+    marginTop: 30,
+    width: 350,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  infotext: {
+    fontSize: 26,
+    marginLeft: 10
+  },
+  add: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 110,
+    height: 35,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#CCC'
+  },
+  addStreet: {
+    marginTop: 20,
+    width: 350,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   }
 });
