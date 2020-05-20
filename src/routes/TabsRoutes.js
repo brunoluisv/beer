@@ -9,6 +9,7 @@ const AppTabs = createBottomTabNavigator();
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Drink from '../screens/Drink';
+import Partners from '../screens/Partners';
 
 const TabsRoutes = () => {
   return (
@@ -40,6 +41,15 @@ const TabsRoutes = () => {
           options={{
             tabBarIcon: ({ color, size }) => (
               <FontAwesome5 name="beer" size={size} color={color} />
+            )
+          }}
+        />
+        <AppTabs.Screen 
+          name="Partners" 
+          component={Partners} 
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5 name="store" size={size} color={color} />
             )
           }}
         />
